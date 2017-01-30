@@ -31,6 +31,15 @@
 		"oAP": "\/main.css.map",
 		"oF": 0
 		},
+	"\/main.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/main-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/main.less": {
 		"aP": 0,
 		"bl": 0,

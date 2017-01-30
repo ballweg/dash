@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-@Color1: #00ccf0;      /*706f73*/
-@Color2: rgb(14, 75, 75);      /*a0a0a4*/
+@Color1: #00ccf0;
+@Color2: rgb(0, 0, 0);
+// rgb(14, 75, 75);
 body{
   font-family: 'Montserrat', sans-serif;
   background-color: black;
@@ -41,4 +42,89 @@ h1{
   font-weight: bold;
   font-size: 3em;
   text-align: center;
+}
+
+
+/* Widget 3, Clock */
+.clock {
+  border-radius: 50%;
+  background: lighten(@Color2, 3%) url(/images/posts/clocks/ios_clock.svg) no-repeat center;
+  background-size: 88%;
+  height: 150px;
+  padding-bottom: 31%;
+  position: relative;
+  width: 350px;
+  margin-top: 14%;
+  margin-left: 22%;
+}
+
+.clock.simple:after {
+  background: #000;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5%;
+  height: 5%;
+  z-index: 10;
+}
+
+.minutes-container, .hours-container, .seconds-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hours {
+  background: lighten(@Color2, 10%);
+  height: 20%;
+  left: 48.75%;
+  position: absolute;
+  top: 30%;
+  transform-origin: 50% 100%;
+  width: 2.5%;
+  box-shadow: 0px 0px 3px rgba(50,50,50,0.5);
+}
+
+.minutes {
+  background: lighten(@Color2, 10%);
+  height: 40%;
+  left: 49%;
+  position: absolute;
+  top: 10%;
+  transform-origin: 50% 100%;
+  width: 2%;
+  box-shadow: 0px 0px 4px rgba(50,50,50,0.6);
+}
+
+.seconds {
+  background: lighten(@Color2, 20%);
+  height: 45%;
+  left: 49.5%;
+  position: absolute;
+  top: 14%;
+  transform-origin: 50% 80%;
+  width: 1%;
+  z-index: 8;
+  box-shadow: 0px 0px 5px rgba(50,50,50,0.7);
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.hours-container {
+  animation: rotate 43200s infinite linear;
+}
+.minutes-container {
+  transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44);
+}
+.seconds-container {
+  transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);
 }

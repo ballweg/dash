@@ -11,7 +11,7 @@ function updateClock() {
     months_s = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
     days     = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-    time = now.getHours() + ':' + (now.getMinutes()<10?'0':'' + now.getMinutes()),
+    time = now.getHours() + ':' + (now.getMinutes()<10?'0':'') + now.getMinutes(),
     // build month string
     date = [days[now.getDay()] + ',',
             months_s[now.getMonth()],

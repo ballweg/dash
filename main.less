@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @Color1: #00ccf0;      /*706f73*/
-@Color2: rgb(14, 75, 75);      /*a0a0a4*/
+@Color2: rgb(0,0,0); //rgb(14, 75, 75);      /*a0a0a4*/
+@exact : rgb(10, 138, 199);
+@milios: #860F06;
 body{
   font-family: 'Montserrat', sans-serif;
   background-color: black;
@@ -39,7 +41,8 @@ h1{
   text-align: center;
 }
 
-.time, .date{
+/* time and weather */
+.time, .date, .weather{
   display: block;
   height: 25%;
   line-height: 25vh;
@@ -49,4 +52,29 @@ h1{
 .time{
   font-size: 4em;
   font-weight: bold;
+}
+
+.weather{
+  font-size: 1em;
+}
+
+/* exact sciences scheme */
+.es{
+  background-color: darken(@exact, 10%);
+  &.inv{
+    color: @exact;
+  }
+}
+
+/* milio's scheme */
+.mo{
+  background-color: darken(@milios, 10%);
+  &.inv{
+    color: @milios;
+  }
+}
+
+/* inverted schemes */
+.inv{
+  background-color: #000;
 }

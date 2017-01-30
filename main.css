@@ -31,8 +31,7 @@ h1 {
   height: 50vh;
   line-height: 50vh;
   color: white;
-  font-weight: bold;
-  font-size: 3em;
+  font-size: 3.4em;
   text-align: center;
 }
 .time,
@@ -40,8 +39,10 @@ h1 {
   display: block;
   height: 25%;
   line-height: 25vh;
+  font-size: 1.2em;
 }
 .time {
   font-size: 4em;
+  font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */
